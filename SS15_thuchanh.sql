@@ -152,9 +152,11 @@ before update on Grades
 for each row
 begin
 	if old.Score >= 4.0 then
-    signal sqlstate '45000'
-    set message_text = 'Sinh vien da qua mon, khong duoc phep sua diem'
+		signal sqlstate '45000'
+		set message_text = 'Sinh vien da qua mon, khong duoc phep sua diem';
     end if;
 end $$
 
 DELIMITER ;
+
+
